@@ -223,8 +223,8 @@ check.py           self-checks
 Neural Elements were introduced in Chapters 2 and 3 of this dissertation. This library ports that work to Python and
 extends it with the nonlinear formulation and the material models above.
 
-Shane Transue. *Inverse Modeling for Data-driven Physical Simulation*. Doctoral dissertation, Department of Computer
-Science and Engineering, University of Colorado Denver, 2019.
+Shane Transue. [*Inverse Modeling for Data-driven Physical Simulation*](https://digital.auraria.edu/works/publication-dissertation/czp2s-8h211). Doctoral dissertation, Department
+of Computer Science and Engineering, University of Colorado Denver, 2019.
 
 ```bibtex
 @phdthesis{transue2019inverse,
@@ -233,7 +233,8 @@ Science and Engineering, University of Colorado Denver, 2019.
   school  = {University of Colorado Denver, Department of Computer Science and Engineering},
   address = {Denver, Colorado},
   year    = {2019},
-  type    = {Doctoral dissertation}
+  type    = {Doctoral dissertation},
+  url     = {https://digital.auraria.edu/works/publication-dissertation/czp2s-8h211}
 }
 ```
 
