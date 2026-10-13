@@ -245,3 +245,8 @@ The CPU is an Intel laptop CPU and the GPU an RTX 4080 Laptop.
 - **The nonlinear formulation does neither.**
 - **Small meshes:** at the default sizes the GPU is limited by kernel launches rather than arithmetic.
 - **Precision:** GPU forces agree with the CPU's to about 1e-6.
+
+## License
+
+MIT, see [LICENSE](LICENSE). The trained networks in `models/` and the animations in `examples/images/` are
+covered by the same license.
