@@ -3,13 +3,13 @@
 # Neural Elements
 
 **TL;DR: data-driven continuum mechanics for solid elements.**
+- **The material is the data.** The same formulation reproduces linear, Neo-Hookean and St. Venant-Kirchhoff
+  materials to within 0.4% of finite elements (FEM). Only the training data changes.
+- **Real-time simulation in plain PyTorch.** The scenes here, up to 2,520 elements, run in real time on a laptop GPU.
+  The same code runs on the CPU and scales to 161k elements. It comes with an OpenGL viewer and one-file examples.
 - **One reference element.** A small network (96 weights) learns the reaction forces of one reference tetrahedron.
   Every element of a mesh gets its internal forces from it, through its own geometry. No constitutive law is
   evaluated at run time.
-- **The material is the data.** The same formulation reproduces linear, Neo-Hookean and St. Venant-Kirchhoff
-  materials to within 0.4% of finite elements (FEM). Only the training data changes.
-- **Plain PyTorch.** The same code runs on the CPU or a CUDA GPU, up to 161k elements. It comes with an OpenGL viewer
-  and one-file examples.
 
 ## The approach
 

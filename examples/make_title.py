@@ -5,7 +5,7 @@
 Background: a twisted Neo-Hookean beam (finite elements of the material), rendered with the viewer's OpenGL renderer
 and faded. Foreground: one of its surface elements, drawn as the reference element under that element's deformation
 (exaggerated for visibility), with its undeformed outline dashed and its reaction forces f_i = V P(F) grad N_i as
-arrows: the quantity the Neural Element networks are trained on.
+arrows: the quantity the Neural Element networks are trained on. Caption: "Data-driven Solid Materials".
 """
 import math
 import os
@@ -181,16 +181,11 @@ def main():
         qp.setBrush(QtGui.QColor(255, 255, 255))
         qp.drawEllipse(QtCore.QPointF(*flat(xr[v])), 7, 7)
     qp.setBrush(Qt.NoBrush)
-    small = QtGui.QFont("Segoe UI", 12)
-    small.setItalic(True)
-    qp.setFont(small)
-    box = np.array([flat(p) for p in np.concatenate([Xr, xr])] + tips)        # labels outside the drawing
-    qp.setPen(FORCE)
-    qp.drawText(QtCore.QRectF(box[:, 0].max() - 200, box[:, 1].min() - 40, 220, 26), Qt.AlignRight | Qt.TextDontClip,
-                "reaction forces")
-    qp.setPen(QtGui.QColor(95, 100, 118))
-    qp.drawText(QtCore.QRectF(center[0] - 350, box[:, 1].max() + 10, 700, 26), Qt.AlignHCenter | Qt.TextDontClip,
-                "one element under its deformation   (dashed: at rest)")
+    box = np.array([flat(p) for p in np.concatenate([Xr, xr])] + tips)        # the caption below the drawing
+    qp.setFont(QtGui.QFont("Segoe UI", 16, QtGui.QFont.DemiBold))
+    qp.setPen(INK)
+    qp.drawText(QtCore.QRectF(center[0] - 300, box[:, 1].max() + 14, 600, 30), Qt.AlignHCenter | Qt.TextDontClip,
+                "Data-driven Solid Materials")
 
     # title
     qp.setPen(INK)
