@@ -1,0 +1,6 @@
+# the library and the terminal example
+torch>=2.0
+numpy
+# the interactive application (viewer.py)
+PyQt5
+matplotlib
