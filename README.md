@@ -27,8 +27,8 @@ deformed.
 
 The element's internal representation therefore becomes a data-driven inverse process: a learned map from
 deformation to reaction forces. There are two formulations.
-- **Linear.** Twelve single-node load cases per element, the formulation of the original Neural Elements work. It
-  covers linear materials.
+- **Linear.** Twelve single-node load cases per element, the formulation of the original Neural Elements work
+  ([dissertation](#citation)). It covers linear materials.
 - **Nonlinear.** One load case per element, its whole deformation. The network learns the reference element's strain
   energy, and the forces are its derivative. This carries nonlinear materials. It needs no rotation extraction, its
   tangent is exact and symmetric, and its forces conserve energy.
@@ -216,6 +216,25 @@ examples/          <material>-<scene>.py, make_gifs.py and make_title.py (the im
 example.py         terminal example
 viewer.py          interactive application
 check.py           self-checks
+```
+
+## Citation
+
+Neural Elements were introduced in Chapters 2 and 3 of this dissertation. This library ports that work to Python and
+extends it with the nonlinear formulation and the material models above.
+
+Shane Transue. *Inverse Modeling for Data-driven Physical Simulation*. Doctoral dissertation, Department of Computer
+Science and Engineering, University of Colorado Denver, 2019.
+
+```bibtex
+@phdthesis{transue2019inverse,
+  author  = {Shane Transue},
+  title   = {Inverse Modeling for Data-driven Physical Simulation},
+  school  = {University of Colorado Denver, Department of Computer Science and Engineering},
+  address = {Denver, Colorado},
+  year    = {2019},
+  type    = {Doctoral dissertation}
+}
 ```
 
 ## License
