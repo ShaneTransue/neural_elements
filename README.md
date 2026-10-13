@@ -196,7 +196,7 @@ Each value is against the FEM of the same material; the first three rows come fr
 
 Over full runs of every scene, all models converge at every step and no element inverts.
 
-Time per frame on a laptop, against the scenes' time step of 16.7 ms (twist: 33 ms):
+Time per frame on (GTX 4080 Mobile), against the scenes' time step of 16.7 ms (twist: 33 ms):
 
 | | CPU, double | GPU, single | GPU, 64x elements |
 |---|---|---|---|
