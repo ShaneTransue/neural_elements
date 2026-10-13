@@ -10,6 +10,7 @@
 - **One reference element.** A small network (96 weights) learns the reaction forces of one reference tetrahedron.
   Every element of a mesh gets its internal forces from it, through its own geometry. No constitutive law is
   evaluated at run time.
+- **Note:** This is an AI assisted port of the original C++ code.
 
 ## The approach
 
