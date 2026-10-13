@@ -82,6 +82,16 @@ python check.py                         # self-checks
 
 ## Results
 
+**Twist.** One end of a beam is turned by up to half a turn each way, with a linear material. The scene runs with FEM,
+Neural Elements and a mass-spring system.
+- **Top row:** each model, colored by von Mises stress.
+- **Bottom row:** the end torque, and the position difference from FEM, on a scale of 0–10% of FEM's largest
+  displacement.
+
+Neural Elements stay within 0.2% of FEM. The mass-spring system lags behind, and its peak torque is 18% low.
+
+![twist](examples/images/twist.gif)
+
 **One formulation, three materials.** Linear, Neo-Hookean and St. Venant-Kirchhoff are pulled out and pushed in by
 32%. Each runs with Neural Elements, using that material's network, and with the material's FEM.
 - **The materials diverge.** In tension St. Venant-Kirchhoff is the stiffest and Neo-Hookean the softest; in
@@ -97,10 +107,7 @@ both the softening in tension and the stiffening in compression.
 
 ### Comparison with FEM and a mass-spring system
 
-Below, each scene runs with FEM, Neural Elements and a mass-spring system.
-- **Top row:** each model, colored by von Mises stress.
-- **Bottom row:** the scene's measurement, and the position difference from FEM, on a scale of 0–10% of FEM's largest
-  displacement.
+The remaining scenes use the same layout as the twist.
 
 **Neo-Hookean rubber (ν = 0.45), out and in by 32%.** Neural Elements match Neo-Hookean FEM to 0.8% in force and 0.1
 percentage points in volume. The springs get the material wrong:
@@ -115,10 +122,9 @@ Neural Elements agree to 0.1%.
 
 ![compression](examples/images/compression.gif)
 
-**Twist and cantilever.** The mass-spring system's peak torque is 18% low, and it sags 9% less. Neural Elements stay
-within 0.2% of FEM.
+**Cantilever.** The beam bends under its own weight. The mass-spring system sags 9% less and swings faster. Neural
+Elements stay within 0.2% of FEM.
 
-![twist](examples/images/twist.gif)
 ![cantilever](examples/images/cantilever.gif)
 
 ## Using the library
